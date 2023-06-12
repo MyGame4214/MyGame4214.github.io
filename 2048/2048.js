@@ -129,25 +129,19 @@ window.addEventListener("keydown", (event) => {
 function checkDirection() {
   diffx=Math.abs(touchendX-touchstartX);
   diffy=Math.abs(touchendY-touchstartY);
-  alert(diffx);
-  alert(diffy);
   if (diffx > diffy) {
     if (touchendX + 10 < touchstartX) {
-      alert("swiped left!");
       left();
     }
     if (touchendX > touchstartX + 10) {
-      alert("swiped right!");
       right();
     }
   } else {
     if (touchendY + 10 < touchstartY) {
-      alert("swiped down!");
-      down();
+      up();
     }
     if (touchendY > touchstartY + 10) {
-      alert("swiped up!");
-      up();
+      down();
     }
   }
 }
