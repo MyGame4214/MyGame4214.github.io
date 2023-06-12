@@ -127,9 +127,10 @@ window.addEventListener("keydown", (event) => {
 });
 
 function checkDirection() {
-  alert("here");
   diffx = Math.abs(touchstartX - touchendX);
   diffy = Math.abs(touchstartY - touchendY);
+  alert(diffx);
+  alert(diffy);
   if (diffx > diffy) {
     if (touchendX + 10 < touchstartX) {
       alert("swiped left!");
