@@ -130,17 +130,17 @@ function checkDirection() {
   diffx=Math.abs(touchendX-touchstartX);
   diffy=Math.abs(touchendY-touchstartY);
   if (diffx > diffy) {
-    if (touchendX + 10 < touchstartX) {
+    if (touchendX + 30 < touchstartX) {
       left();
     }
-    if (touchendX > touchstartX + 10) {
+    if (touchendX > touchstartX + 30) {
       right();
     }
   } else {
-    if (touchendY + 10 < touchstartY) {
+    if (touchendY + 30 < touchstartY) {
       up();
     }
-    if (touchendY > touchstartY + 10) {
+    if (touchendY > touchstartY + 30) {
       down();
     }
   }
