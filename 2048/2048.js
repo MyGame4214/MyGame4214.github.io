@@ -127,6 +127,7 @@ window.addEventListener("keydown", (event) => {
 });
 
 function checkDirection() {
+  alert("here");
   diffx = Math.abs(touchstartX - touchendX);
   diffy = Math.abs(touchstartY - touchendY);
   if (diffx > diffy) {
@@ -149,12 +150,12 @@ function checkDirection() {
     }
   }
 }
-document.addEventListener("touchstart", (e) => {
+window.addEventListener("touchstart", (e) => {
   touchstartX = e.changedTouches[0].screenX;
   touchstartX = e.changedTouches[0].screenY;
 });
 
-document.addEventListener("touchend", (e) => {
+window.addEventListener("touchend", (e) => {
   touchendX = e.changedTouches[0].screenX;
   touchendX = e.changedTouches[0].screenY;
   checkDirection();
